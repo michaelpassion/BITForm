@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5C9ADF4370F15AED080F422 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1337DDA9C85AE62EDF444425 /* libPods.a */; };
+		E19D5C2B1AE0ACF0003CB866 /* NSString+DecodeURLString.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2A1AE0ACF0003CB866 /* NSString+DecodeURLString.m */; };
+		E19D5C341AE0CEB3003CB866 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2D1AE0CEB3003CB866 /* SKSTableView.m */; };
+		E19D5C351AE0CEB3003CB866 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2F1AE0CEB3003CB866 /* SKSTableViewCell.m */; };
+		E19D5C361AE0CEB3003CB866 /* SKSTableViewCellIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C311AE0CEB3003CB866 /* SKSTableViewCellIndicator.m */; };
+		E19D5C371AE0CEB3003CB866 /* expandableImage.png in Resources */ = {isa = PBXBuildFile; fileRef = E19D5C321AE0CEB3003CB866 /* expandableImage.png */; };
+		E19D5C381AE0CEB3003CB866 /* expandableImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E19D5C331AE0CEB3003CB866 /* expandableImage@2x.png */; };
+		E1CA11F71ADF66530069434E /* BITUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA11F61ADF66530069434E /* BITUser.m */; };
+		E1CA11FD1ADF98900069434E /* BITForumListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA11FC1ADF98900069434E /* BITForumListTableViewController.m */; };
+		E1CA12001ADFA15B0069434E /* BITHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA11FF1ADFA15B0069434E /* BITHTTPClient.m */; };
+		E1CA12031ADFA5800069434E /* BITCommenTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E1CA12021ADFA5800069434E /* BITCommenTools.m */; };
 		E1DA3C4C1ADE26170071BE5F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C4B1ADE26170071BE5F /* main.m */; };
 		E1DA3C4F1ADE26170071BE5F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C4E1ADE26170071BE5F /* AppDelegate.m */; };
-		E1DA3C521ADE26170071BE5F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C511ADE26170071BE5F /* FirstViewController.m */; };
-		E1DA3C551ADE26170071BE5F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C541ADE26170071BE5F /* SecondViewController.m */; };
 		E1DA3C581ADE26170071BE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3C561ADE26170071BE5F /* Main.storyboard */; };
 		E1DA3C5A1ADE26170071BE5F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3C591ADE26170071BE5F /* Images.xcassets */; };
 		E1DA3C5D1ADE26170071BE5F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1DA3C5B1ADE26170071BE5F /* LaunchScreen.xib */; };
 		E1DA3C691ADE26170071BE5F /* BITUnionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C681ADE26170071BE5F /* BITUnionTests.m */; };
+		E1DA3C741ADE331F0071BE5F /* BITLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C731ADE331F0071BE5F /* BITLoginManager.m */; };
+		E1DA3C8B1ADE37960071BE5F /* BITLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C8A1ADE37960071BE5F /* BITLoginViewController.m */; };
+		E1DA3C8E1ADE417D0071BE5F /* BITLoginHTTPClinet.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DA3C8D1ADE417D0071BE5F /* BITLoginHTTPClinet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,21 +40,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1337DDA9C85AE62EDF444425 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DAA2CE723F32006E6014014 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D97D6DEB1630F14C5A73A2AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E19D5C291AE0ACF0003CB866 /* NSString+DecodeURLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DecodeURLString.h"; sourceTree = "<group>"; };
+		E19D5C2A1AE0ACF0003CB866 /* NSString+DecodeURLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DecodeURLString.m"; sourceTree = "<group>"; };
+		E19D5C2C1AE0CEB3003CB866 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
+		E19D5C2D1AE0CEB3003CB866 /* SKSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableView.m; sourceTree = "<group>"; };
+		E19D5C2E1AE0CEB3003CB866 /* SKSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCell.h; sourceTree = "<group>"; };
+		E19D5C2F1AE0CEB3003CB866 /* SKSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCell.m; sourceTree = "<group>"; };
+		E19D5C301AE0CEB3003CB866 /* SKSTableViewCellIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableViewCellIndicator.h; sourceTree = "<group>"; };
+		E19D5C311AE0CEB3003CB866 /* SKSTableViewCellIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKSTableViewCellIndicator.m; sourceTree = "<group>"; };
+		E19D5C321AE0CEB3003CB866 /* expandableImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expandableImage.png; sourceTree = "<group>"; };
+		E19D5C331AE0CEB3003CB866 /* expandableImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "expandableImage@2x.png"; sourceTree = "<group>"; };
+		E1CA11F51ADF66530069434E /* BITUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITUser.h; sourceTree = "<group>"; };
+		E1CA11F61ADF66530069434E /* BITUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITUser.m; sourceTree = "<group>"; };
+		E1CA11FB1ADF98900069434E /* BITForumListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITForumListTableViewController.h; sourceTree = "<group>"; };
+		E1CA11FC1ADF98900069434E /* BITForumListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITForumListTableViewController.m; sourceTree = "<group>"; };
+		E1CA11FE1ADFA15B0069434E /* BITHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITHTTPClient.h; sourceTree = "<group>"; };
+		E1CA11FF1ADFA15B0069434E /* BITHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITHTTPClient.m; sourceTree = "<group>"; };
+		E1CA12011ADFA5800069434E /* BITCommenTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BITCommenTools.h; path = BITUnion/BITCommenTools.h; sourceTree = "<group>"; };
+		E1CA12021ADFA5800069434E /* BITCommenTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BITCommenTools.m; path = BITUnion/BITCommenTools.m; sourceTree = "<group>"; };
 		E1DA3C461ADE26170071BE5F /* BITUnion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BITUnion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DA3C4A1ADE26170071BE5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DA3C4B1ADE26170071BE5F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1DA3C4D1ADE26170071BE5F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1DA3C4E1ADE26170071BE5F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1DA3C501ADE26170071BE5F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		E1DA3C511ADE26170071BE5F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		E1DA3C531ADE26170071BE5F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		E1DA3C541ADE26170071BE5F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		E1DA3C571ADE26170071BE5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1DA3C591ADE26170071BE5F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1DA3C5C1ADE26170071BE5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E1DA3C621ADE26170071BE5F /* BITUnionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BITUnionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DA3C671ADE26170071BE5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1DA3C681ADE26170071BE5F /* BITUnionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BITUnionTests.m; sourceTree = "<group>"; };
+		E1DA3C721ADE331F0071BE5F /* BITLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BITLoginManager.h; path = BITUnion/BITLoginManager.h; sourceTree = "<group>"; };
+		E1DA3C731ADE331F0071BE5F /* BITLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BITLoginManager.m; path = BITUnion/BITLoginManager.m; sourceTree = "<group>"; };
+		E1DA3C891ADE37960071BE5F /* BITLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITLoginViewController.h; sourceTree = "<group>"; };
+		E1DA3C8A1ADE37960071BE5F /* BITLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITLoginViewController.m; sourceTree = "<group>"; };
+		E1DA3C8C1ADE417D0071BE5F /* BITLoginHTTPClinet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITLoginHTTPClinet.h; sourceTree = "<group>"; };
+		E1DA3C8D1ADE417D0071BE5F /* BITLoginHTTPClinet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITLoginHTTPClinet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C9ADF4370F15AED080F422 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,14 +99,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77AA6110D0596571C2F53EEB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D97D6DEB1630F14C5A73A2AF /* Pods.debug.xcconfig */,
+				8DAA2CE723F32006E6014014 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E19D5C281AE0ABDE003CB866 /* CommonTools */ = {
+			isa = PBXGroup;
+			children = (
+				E19D5C3A1AE0CED4003CB866 /* SKSTableView */,
+				E1CA12011ADFA5800069434E /* BITCommenTools.h */,
+				E1CA12021ADFA5800069434E /* BITCommenTools.m */,
+				E19D5C291AE0ACF0003CB866 /* NSString+DecodeURLString.h */,
+				E19D5C2A1AE0ACF0003CB866 /* NSString+DecodeURLString.m */,
+			);
+			name = CommonTools;
+			sourceTree = "<group>";
+		};
+		E19D5C3A1AE0CED4003CB866 /* SKSTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E19D5C2C1AE0CEB3003CB866 /* SKSTableView.h */,
+				E19D5C2D1AE0CEB3003CB866 /* SKSTableView.m */,
+				E19D5C2E1AE0CEB3003CB866 /* SKSTableViewCell.h */,
+				E19D5C2F1AE0CEB3003CB866 /* SKSTableViewCell.m */,
+				E19D5C301AE0CEB3003CB866 /* SKSTableViewCellIndicator.h */,
+				E19D5C311AE0CEB3003CB866 /* SKSTableViewCellIndicator.m */,
+				E19D5C321AE0CEB3003CB866 /* expandableImage.png */,
+				E19D5C331AE0CEB3003CB866 /* expandableImage@2x.png */,
+			);
+			name = SKSTableView;
+			sourceTree = "<group>";
+		};
 		E1DA3C3D1ADE26170071BE5F = {
 			isa = PBXGroup;
 			children = (
+				E19D5C281AE0ABDE003CB866 /* CommonTools */,
 				E1DA3C481ADE26170071BE5F /* BITUnion */,
 				E1DA3C651ADE26170071BE5F /* BITUnionTests */,
 				E1DA3C471ADE26170071BE5F /* Products */,
+				77AA6110D0596571C2F53EEB /* Pods */,
+				EA5CF534C96FF86256245C58 /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		E1DA3C471ADE26170071BE5F /* Products */ = {
 			isa = PBXGroup;
@@ -86,11 +162,9 @@
 			children = (
 				E1DA3C4D1ADE26170071BE5F /* AppDelegate.h */,
 				E1DA3C4E1ADE26170071BE5F /* AppDelegate.m */,
-				E1DA3C501ADE26170071BE5F /* FirstViewController.h */,
-				E1DA3C511ADE26170071BE5F /* FirstViewController.m */,
-				E1DA3C531ADE26170071BE5F /* SecondViewController.h */,
-				E1DA3C541ADE26170071BE5F /* SecondViewController.m */,
-				E1DA3C561ADE26170071BE5F /* Main.storyboard */,
+				E1DA3C851ADE33DF0071BE5F /* controller */,
+				E1DA3C841ADE33D80071BE5F /* model */,
+				E1DA3C831ADE33C30071BE5F /* view */,
 				E1DA3C591ADE26170071BE5F /* Images.xcassets */,
 				E1DA3C5B1ADE26170071BE5F /* LaunchScreen.xib */,
 				E1DA3C491ADE26170071BE5F /* Supporting Files */,
@@ -124,6 +198,51 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E1DA3C831ADE33C30071BE5F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA3C561ADE26170071BE5F /* Main.storyboard */,
+			);
+			name = view;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E1DA3C841ADE33D80071BE5F /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E1CA11F51ADF66530069434E /* BITUser.h */,
+				E1CA11F61ADF66530069434E /* BITUser.m */,
+				E1DA3C721ADE331F0071BE5F /* BITLoginManager.h */,
+				E1DA3C731ADE331F0071BE5F /* BITLoginManager.m */,
+				E1DA3C8C1ADE417D0071BE5F /* BITLoginHTTPClinet.h */,
+				E1DA3C8D1ADE417D0071BE5F /* BITLoginHTTPClinet.m */,
+				E1CA11FE1ADFA15B0069434E /* BITHTTPClient.h */,
+				E1CA11FF1ADFA15B0069434E /* BITHTTPClient.m */,
+			);
+			name = model;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E1DA3C851ADE33DF0071BE5F /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1DA3C891ADE37960071BE5F /* BITLoginViewController.h */,
+				E1DA3C8A1ADE37960071BE5F /* BITLoginViewController.m */,
+				E1CA11FB1ADF98900069434E /* BITForumListTableViewController.h */,
+				E1CA11FC1ADF98900069434E /* BITForumListTableViewController.m */,
+			);
+			name = controller;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		EA5CF534C96FF86256245C58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1337DDA9C85AE62EDF444425 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1DA3C6C1ADE26170071BE5F /* Build configuration list for PBXNativeTarget "BITUnion" */;
 			buildPhases = (
+				16074E31E7C2C0A1F5C28F1C /* Check Pods Manifest.lock */,
 				E1DA3C421ADE26170071BE5F /* Sources */,
 				E1DA3C431ADE26170071BE5F /* Frameworks */,
 				E1DA3C441ADE26170071BE5F /* Resources */,
+				042B4AC51C9CD940AD7B3F3A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1DA3C581ADE26170071BE5F /* Main.storyboard in Resources */,
+				E19D5C381AE0CEB3003CB866 /* expandableImage@2x.png in Resources */,
+				E19D5C371AE0CEB3003CB866 /* expandableImage.png in Resources */,
 				E1DA3C5D1ADE26170071BE5F /* LaunchScreen.xib in Resources */,
 				E1DA3C5A1ADE26170071BE5F /* Images.xcassets in Resources */,
 			);
@@ -218,14 +341,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		042B4AC51C9CD940AD7B3F3A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16074E31E7C2C0A1F5C28F1C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E1DA3C421ADE26170071BE5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1DA3C551ADE26170071BE5F /* SecondViewController.m in Sources */,
+				E1CA12001ADFA15B0069434E /* BITHTTPClient.m in Sources */,
+				E1CA11FD1ADF98900069434E /* BITForumListTableViewController.m in Sources */,
+				E19D5C361AE0CEB3003CB866 /* SKSTableViewCellIndicator.m in Sources */,
+				E1DA3C741ADE331F0071BE5F /* BITLoginManager.m in Sources */,
+				E19D5C341AE0CEB3003CB866 /* SKSTableView.m in Sources */,
+				E1CA12031ADFA5800069434E /* BITCommenTools.m in Sources */,
+				E19D5C351AE0CEB3003CB866 /* SKSTableViewCell.m in Sources */,
 				E1DA3C4F1ADE26170071BE5F /* AppDelegate.m in Sources */,
-				E1DA3C521ADE26170071BE5F /* FirstViewController.m in Sources */,
+				E1CA11F71ADF66530069434E /* BITUser.m in Sources */,
+				E1DA3C8B1ADE37960071BE5F /* BITLoginViewController.m in Sources */,
+				E1DA3C8E1ADE417D0071BE5F /* BITLoginHTTPClinet.m in Sources */,
+				E19D5C2B1AE0ACF0003CB866 /* NSString+DecodeURLString.m in Sources */,
 				E1DA3C4C1ADE26170071BE5F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -255,6 +420,7 @@
 				E1DA3C571ADE26170071BE5F /* Base */,
 			);
 			name = Main.storyboard;
+			path = BITUnion;
 			sourceTree = "<group>";
 		};
 		E1DA3C5B1ADE26170071BE5F /* LaunchScreen.xib */ = {
@@ -346,6 +512,7 @@
 		};
 		E1DA3C6D1ADE26170071BE5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D97D6DEB1630F14C5A73A2AF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BITUnion/Info.plist;
@@ -356,6 +523,7 @@
 		};
 		E1DA3C6E1ADE26170071BE5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DAA2CE723F32006E6014014 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BITUnion/Info.plist;
@@ -417,6 +585,7 @@
 				E1DA3C6E1ADE26170071BE5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1DA3C6F1ADE26170071BE5F /* Build configuration list for PBXNativeTarget "BITUnionTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +594,7 @@
 				E1DA3C711ADE26170071BE5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
