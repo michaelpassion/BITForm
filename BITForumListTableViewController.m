@@ -12,7 +12,8 @@
 #import "NSString+DecodeURLString.h"
 #import "SKSTableView.h"
 #import "SKSTableViewCell.h"
-
+#import "BITSubFormCell.h"
+#import "BITSubFormListTableViewController.h"
 
 @interface BITForumListTableViewController ()
 
@@ -37,6 +38,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Table view delegate
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"SubFormSegue"] &&
+        [segue.destinationViewController isKindOfClass:NSClassFromString(@"BITSubFormListTableViewController")]) {
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        BITSubFormCell *cell = (BITSubFormCell*)[self.tableView cellForRowAtIndexPath:indexPath];
+        BITSubFormListTableViewController* dest = segue.destinationViewController;
+        [dest setValue:cell.fid forKey:@"fid"];
+    }
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([[tableView cellForRowAtIndexPath:indexPath] isKindOfClass:NSClassFromString(@"SKSTableViewCell")]) {
+        return;
+    }
+    [self performSegueWithIdentifier:@"SubFormSegue" sender: self.tableView.indexPathForSelectedRow];
+
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -50,15 +73,11 @@
 }
 - (NSInteger)tableView:(SKSTableView *)tableView numberOfSubRowsAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     if ([[_firLevelArray objectAtIndex:[indexPath row]] isKindOfClass:NSClassFromString(@"NSDictionary")] ) {
         NSDictionary *dict = [_firLevelArray objectAtIndex:[indexPath row]];
-        return [dict count] - 1;
-    }
-    else if ([[_firLevelArray objectAtIndex:[indexPath row]] isKindOfClass: NSClassFromString(@"NSArray")])
-    {
-        NSArray *arr =[_firLevelArray objectAtIndex:[indexPath row]];
-        return [arr count];
+        NSArray *keys = [dict allKeys];
+        NSInteger rows = [keys count];
+        return rows - 1;
     }
     return 0;
 }
@@ -70,7 +89,7 @@
     SKSTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[SKSTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[SKSTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
     if ([[_firLevelArray objectAtIndex:[indexPath row]] isKindOfClass: NSClassFromString(@"NSDictionary")]) {
@@ -78,54 +97,41 @@
         NSString* title = [dict[@"main"][@"name"] stringByDecodingURLFormat];
         cell.textLabel.text = title;
     }
-    else if ([[_firLevelArray objectAtIndex:[indexPath row]] isKindOfClass: NSClassFromString(@"NSArray")])
-    {
-        cell.textLabel.text = @"无人区";
-
-    }
+   
     cell.isExpandable = YES;
     return cell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForSubRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"UITableViewCell";
+    static NSString *CellIdentifier = @"BITSubFormCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    BITSubFormCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
+        cell = [[BITSubFormCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     if ([[_firLevelArray objectAtIndex:[indexPath row]] isKindOfClass: NSClassFromString(@"NSDictionary")]) {
         NSDictionary *dict = [_firLevelArray objectAtIndex:[indexPath row]];
-        NSDictionary *subDict = [dict objectForKey:[NSString stringWithFormat:@"%d", indexPath.subRow]];
+        NSDictionary *subDict = [dict objectForKey:[NSString stringWithFormat:@"%li",[indexPath subRow]-1]];
+        
         if ([subDict[@"main"] isKindOfClass:NSClassFromString(@"NSArray")]) {
             NSDictionary *contnentDict = subDict[@"main"][0];
             cell.textLabel.text = [contnentDict[@"name"] stringByDecodingURLFormat];
-
+#warning 在线人数本地化
+//            cell.detailTextLabel.text = [NSString stringWithFormat:@"在线人数: %@",[contnentDict[@"onlines"] stringByDecodingURLFormat] ];
+            cell.detailTextLabel.text =[contnentDict[@"description"] stringByDecodingURLFormat];
+            cell.fid = [contnentDict[@"fid"] stringByDecodingURLFormat];
         }
         
     }
-    else if ([[_firLevelArray objectAtIndex:[indexPath row]] isKindOfClass: NSClassFromString(@"NSArray")])
-    {
-        NSArray *arr = [_firLevelArray objectAtIndex:[indexPath row]];
-        
-        if ([[arr objectAtIndex:indexPath.row] isKindOfClass:NSClassFromString(@"NSDictionary")]) {
-            NSDictionary *dict = [arr objectAtIndex:indexPath.row];
-            NSArray *subArray = [NSArray arrayWithArray:dict[@"sub"]];
-            NSDictionary *subDict = [NSDictionary dictionaryWithDictionary:subArray[indexPath.subRow]];
-            cell.textLabel.text = [subDict[@"name"] stringByDecodingURLFormat];;
-        }
-        
-    }
-    
-
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
     return cell;
 }
 
-
+-(NSComparisonResult)compare:(NSString *)other
+{
+    return [(NSString *)self compare:other] == NSOrderedDescending;
+}
 # pragma mark - retrive data
 
 - (NSDictionary *)getformList
@@ -135,19 +141,17 @@
     NSDictionary *parameters = @{@"action":@"forum",
                                  @"username":[defaultUser objectForKey:@"username"],
                                  @"session":[defaultUser objectForKey:@"session"] };
-    
     NSDictionary *result = nil;
     [_sharedHTTPClient POST:@"bu_forum.php" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
          _formDict = [NSDictionary dictionaryWithDictionary:[BITCommenTools retriveDictionaryFromData:responseObject]];
         if ([_formDict[@"result"] isEqualToString:@"success"]) {
             _firLevelTitle = [NSDictionary dictionaryWithDictionary:_formDict[@"forumslist"]];
             _firLevelArray = [NSMutableArray array];
-//            for (NSDictionary *dict in _firLevelTitle) {
-//                [_firLevelArray addObject: dict];
-//            }
-            NSArray *keys = [_firLevelTitle allKeys];
+            NSArray *keys = [[_firLevelTitle allKeys]  sortedArrayUsingSelector:@selector(compare:)];
             for (NSString *key in keys) {
-                [_firLevelArray addObject:_firLevelTitle[key]];
+                if (![key isEqualToString:@""]) {
+                    [_firLevelArray addObject:_firLevelTitle[key]];
+                }
             }
             [self.tableView reloadData];
         }
@@ -162,18 +166,17 @@
     return result;
 }
 
-- (NSDictionary*)trimUselessInfo
+- (NSDictionary*)modifyMessageDict
 {
     NSMutableDictionary *trimedDict = [NSMutableDictionary dictionary];
-    for (id obj in _firLevelArray) {
-        if ([obj isKindOfClass:NSClassFromString(@"NSDictionary")])
-        {
-            
-        }
-        else if ([obj isKindOfClass:NSClassFromString(@"NSArray")])
-        {
-            
+    NSArray *keys = _firLevelArray;
+    
+    for (NSString* key in keys) {
+        if ([_firLevelTitle[key] isKindOfClass:NSClassFromString(@"NSDictionary")]) {
+            trimedDict[key] = _firLevelTitle[key];
         }
     }
+    
+    return trimedDict;
 }
 @end

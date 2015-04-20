@@ -131,7 +131,7 @@
             
         } else {
             
-            [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+            [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
             [cell removeIndicatorView];
             cell.accessoryView = nil;
             

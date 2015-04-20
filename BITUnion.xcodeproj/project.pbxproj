@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A5C9ADF4370F15AED080F422 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1337DDA9C85AE62EDF444425 /* libPods.a */; };
+		E15B8A621AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B8A611AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m */; };
+		E15B8A651AE5028B00EA2BD7 /* BITSubFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B8A641AE5028B00EA2BD7 /* BITSubFormCell.m */; };
 		E19D5C2B1AE0ACF0003CB866 /* NSString+DecodeURLString.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2A1AE0ACF0003CB866 /* NSString+DecodeURLString.m */; };
 		E19D5C341AE0CEB3003CB866 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2D1AE0CEB3003CB866 /* SKSTableView.m */; };
 		E19D5C351AE0CEB3003CB866 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2F1AE0CEB3003CB866 /* SKSTableViewCell.m */; };
@@ -43,6 +45,10 @@
 		1337DDA9C85AE62EDF444425 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAA2CE723F32006E6014014 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D97D6DEB1630F14C5A73A2AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E15B8A601AE4F03E00EA2BD7 /* BITSubFormListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSubFormListTableViewController.h; sourceTree = "<group>"; };
+		E15B8A611AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSubFormListTableViewController.m; sourceTree = "<group>"; };
+		E15B8A631AE5028B00EA2BD7 /* BITSubFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSubFormCell.h; sourceTree = "<group>"; };
+		E15B8A641AE5028B00EA2BD7 /* BITSubFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSubFormCell.m; sourceTree = "<group>"; };
 		E19D5C291AE0ACF0003CB866 /* NSString+DecodeURLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DecodeURLString.h"; sourceTree = "<group>"; };
 		E19D5C2A1AE0ACF0003CB866 /* NSString+DecodeURLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DecodeURLString.m"; sourceTree = "<group>"; };
 		E19D5C2C1AE0CEB3003CB866 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
@@ -218,6 +224,8 @@
 				E1DA3C8D1ADE417D0071BE5F /* BITLoginHTTPClinet.m */,
 				E1CA11FE1ADFA15B0069434E /* BITHTTPClient.h */,
 				E1CA11FF1ADFA15B0069434E /* BITHTTPClient.m */,
+				E15B8A631AE5028B00EA2BD7 /* BITSubFormCell.h */,
+				E15B8A641AE5028B00EA2BD7 /* BITSubFormCell.m */,
 			);
 			name = model;
 			path = ..;
@@ -230,6 +238,8 @@
 				E1DA3C8A1ADE37960071BE5F /* BITLoginViewController.m */,
 				E1CA11FB1ADF98900069434E /* BITForumListTableViewController.h */,
 				E1CA11FC1ADF98900069434E /* BITForumListTableViewController.m */,
+				E15B8A601AE4F03E00EA2BD7 /* BITSubFormListTableViewController.h */,
+				E15B8A611AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m */,
 			);
 			name = controller;
 			path = ..;
@@ -389,6 +399,8 @@
 				E1DA3C4F1ADE26170071BE5F /* AppDelegate.m in Sources */,
 				E1CA11F71ADF66530069434E /* BITUser.m in Sources */,
 				E1DA3C8B1ADE37960071BE5F /* BITLoginViewController.m in Sources */,
+				E15B8A651AE5028B00EA2BD7 /* BITSubFormCell.m in Sources */,
+				E15B8A621AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m in Sources */,
 				E1DA3C8E1ADE417D0071BE5F /* BITLoginHTTPClinet.m in Sources */,
 				E19D5C2B1AE0ACF0003CB866 /* NSString+DecodeURLString.m in Sources */,
 				E1DA3C4C1ADE26170071BE5F /* main.m in Sources */,
