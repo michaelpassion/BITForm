@@ -48,6 +48,7 @@
         BITSubFormCell *cell = (BITSubFormCell*)[self.tableView cellForRowAtIndexPath:indexPath];
         BITSubFormListTableViewController* dest = segue.destinationViewController;
         [dest setValue:cell.fid forKey:@"fid"];
+        [dest setValue:cell.textLabel.text forKey:@"title"];
     }
 }
 
