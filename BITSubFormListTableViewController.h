@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EGORefreshTableHeaderView.h"
+#import "LoadMoreTableFooterView.h"
 
-@interface BITSubFormListTableViewController : UITableViewController
+@interface BITSubFormListTableViewController : UITableViewController<EGORefreshTableHeaderDelegate,LoadMoreTableFooterDelegate>
 
-@property(nonatomic,assign) NSString *fid;
-
+@property(nonatomic,assign)NSString *fid;
 @end

@@ -10,6 +10,9 @@
 		A5C9ADF4370F15AED080F422 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1337DDA9C85AE62EDF444425 /* libPods.a */; };
 		E15B8A621AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B8A611AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m */; };
 		E15B8A651AE5028B00EA2BD7 /* BITSubFormCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B8A641AE5028B00EA2BD7 /* BITSubFormCell.m */; };
+		E1661C4F1AE61F1900B18198 /* BITThreadDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1661C4E1AE61F1900B18198 /* BITThreadDetailViewController.m */; };
+		E1661C531AE6275800B18198 /* BITThreadDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1661C511AE6275800B18198 /* BITThreadDetailTableViewCell.m */; };
+		E1661C541AE6275800B18198 /* BITThreadDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1661C521AE6275800B18198 /* BITThreadDetailTableViewCell.xib */; };
 		E19D5C2B1AE0ACF0003CB866 /* NSString+DecodeURLString.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2A1AE0ACF0003CB866 /* NSString+DecodeURLString.m */; };
 		E19D5C341AE0CEB3003CB866 /* SKSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2D1AE0CEB3003CB866 /* SKSTableView.m */; };
 		E19D5C351AE0CEB3003CB866 /* SKSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E19D5C2F1AE0CEB3003CB866 /* SKSTableViewCell.m */; };
@@ -49,6 +52,11 @@
 		E15B8A611AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSubFormListTableViewController.m; sourceTree = "<group>"; };
 		E15B8A631AE5028B00EA2BD7 /* BITSubFormCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITSubFormCell.h; sourceTree = "<group>"; };
 		E15B8A641AE5028B00EA2BD7 /* BITSubFormCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITSubFormCell.m; sourceTree = "<group>"; };
+		E1661C4D1AE61F1900B18198 /* BITThreadDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITThreadDetailViewController.h; sourceTree = "<group>"; };
+		E1661C4E1AE61F1900B18198 /* BITThreadDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITThreadDetailViewController.m; sourceTree = "<group>"; };
+		E1661C501AE6275800B18198 /* BITThreadDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BITThreadDetailTableViewCell.h; sourceTree = "<group>"; };
+		E1661C511AE6275800B18198 /* BITThreadDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BITThreadDetailTableViewCell.m; sourceTree = "<group>"; };
+		E1661C521AE6275800B18198 /* BITThreadDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BITThreadDetailTableViewCell.xib; sourceTree = "<group>"; };
 		E19D5C291AE0ACF0003CB866 /* NSString+DecodeURLString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DecodeURLString.h"; sourceTree = "<group>"; };
 		E19D5C2A1AE0ACF0003CB866 /* NSString+DecodeURLString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DecodeURLString.m"; sourceTree = "<group>"; };
 		E19D5C2C1AE0CEB3003CB866 /* SKSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKSTableView.h; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 				E1DA3C841ADE33D80071BE5F /* model */,
 				E1DA3C831ADE33C30071BE5F /* view */,
 				E1DA3C591ADE26170071BE5F /* Images.xcassets */,
+				E1DA3C561ADE26170071BE5F /* Main.storyboard */,
 				E1DA3C5B1ADE26170071BE5F /* LaunchScreen.xib */,
 				E1DA3C491ADE26170071BE5F /* Supporting Files */,
 			);
@@ -207,7 +216,9 @@
 		E1DA3C831ADE33C30071BE5F /* view */ = {
 			isa = PBXGroup;
 			children = (
-				E1DA3C561ADE26170071BE5F /* Main.storyboard */,
+				E1661C501AE6275800B18198 /* BITThreadDetailTableViewCell.h */,
+				E1661C511AE6275800B18198 /* BITThreadDetailTableViewCell.m */,
+				E1661C521AE6275800B18198 /* BITThreadDetailTableViewCell.xib */,
 			);
 			name = view;
 			path = ..;
@@ -240,6 +251,8 @@
 				E1CA11FC1ADF98900069434E /* BITForumListTableViewController.m */,
 				E15B8A601AE4F03E00EA2BD7 /* BITSubFormListTableViewController.h */,
 				E15B8A611AE4F03E00EA2BD7 /* BITSubFormListTableViewController.m */,
+				E1661C4D1AE61F1900B18198 /* BITThreadDetailViewController.h */,
+				E1661C4E1AE61F1900B18198 /* BITThreadDetailViewController.m */,
 			);
 			name = controller;
 			path = ..;
@@ -334,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1661C541AE6275800B18198 /* BITThreadDetailTableViewCell.xib in Resources */,
 				E1DA3C581ADE26170071BE5F /* Main.storyboard in Resources */,
 				E19D5C381AE0CEB3003CB866 /* expandableImage@2x.png in Resources */,
 				E19D5C371AE0CEB3003CB866 /* expandableImage.png in Resources */,
@@ -389,9 +403,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1661C531AE6275800B18198 /* BITThreadDetailTableViewCell.m in Sources */,
 				E1CA12001ADFA15B0069434E /* BITHTTPClient.m in Sources */,
 				E1CA11FD1ADF98900069434E /* BITForumListTableViewController.m in Sources */,
 				E19D5C361AE0CEB3003CB866 /* SKSTableViewCellIndicator.m in Sources */,
+				E1661C4F1AE61F1900B18198 /* BITThreadDetailViewController.m in Sources */,
 				E1DA3C741ADE331F0071BE5F /* BITLoginManager.m in Sources */,
 				E19D5C341AE0CEB3003CB866 /* SKSTableView.m in Sources */,
 				E1CA12031ADFA5800069434E /* BITCommenTools.m in Sources */,
@@ -432,7 +448,6 @@
 				E1DA3C571ADE26170071BE5F /* Base */,
 			);
 			name = Main.storyboard;
-			path = BITUnion;
 			sourceTree = "<group>";
 		};
 		E1DA3C5B1ADE26170071BE5F /* LaunchScreen.xib */ = {

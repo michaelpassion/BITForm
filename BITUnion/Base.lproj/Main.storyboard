@@ -102,6 +102,7 @@
             <objects>
                 <tableViewController id="x6s-CK-IoQ" customClass="BITSubFormListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pLT-fU-Rwv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -118,10 +119,57 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="j1n-Hl-MbN"/>
+                    <connections>
+                        <segue destination="H2y-D4-9Oc" kind="push" identifier="threadDetailSegue" id="BuI-8F-JDW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CY0-B7-HWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3070.5" y="-113"/>
+            <point key="canvasLocation" x="2859" y="-92"/>
+        </scene>
+        <!--Thread Detail View Controller-->
+        <scene sceneID="baZ-hB-VzU">
+            <objects>
+                <viewController id="H2y-D4-9Oc" customClass="BITThreadDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyE-AV-cht"/>
+                        <viewControllerLayoutGuide type="bottom" id="bjy-CS-ZEg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lDd-R4-r4A">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dUZ-ac-14A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="H2y-D4-9Oc" id="juW-cX-YOX"/>
+                                    <outlet property="delegate" destination="H2y-D4-9Oc" id="ixX-18-42l"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dUZ-ac-14A"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dUZ-ac-14A"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pdb-WD-DIH"/>
+                    <connections>
+                        <outlet property="tableView" destination="dUZ-ac-14A" id="69O-IL-5DN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYM-F7-FCG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3622.5" y="-92"/>
         </scene>
         <!--Second-->
         <scene sceneID="vll-nw-Acx">

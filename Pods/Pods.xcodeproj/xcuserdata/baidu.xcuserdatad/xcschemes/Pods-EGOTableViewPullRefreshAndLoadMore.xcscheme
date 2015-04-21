@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "36D817CDDF7DAC4D9B77BC19"
-               BuildableName = "libPods-AFNetworking.a"
-               BlueprintName = "Pods-AFNetworking"
+               BlueprintIdentifier = "6CFCC9FF41A60618535E05F5"
+               BuildableName = "libPods-EGOTableViewPullRefreshAndLoadMore.a"
+               BlueprintName = "Pods-EGOTableViewPullRefreshAndLoadMore"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

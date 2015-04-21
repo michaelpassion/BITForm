@@ -48,3 +48,9 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
 
+// EGOTableViewPullRefreshAndLoadMore
+#define COCOAPODS_POD_AVAILABLE_EGOTableViewPullRefreshAndLoadMore
+#define COCOAPODS_VERSION_MAJOR_EGOTableViewPullRefreshAndLoadMore 1
+#define COCOAPODS_VERSION_MINOR_EGOTableViewPullRefreshAndLoadMore 0
+#define COCOAPODS_VERSION_PATCH_EGOTableViewPullRefreshAndLoadMore 4
+
