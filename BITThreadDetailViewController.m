@@ -12,8 +12,9 @@
 #import "NSString+DecodeURLString.h"
 #import "BITThreadDetailViewController.h"
 #import "BITThreadDetailTableViewCell.h"
+#import "UIImageView+AFNetworking.h"
 
-static NSString* cellIdentifier = @"cellIdentifer";
+static NSString* cellIdentifier = @"BITThreadDetailTableViewCell";
 
 @interface BITThreadDetailViewController()
 {
@@ -37,26 +38,22 @@ static NSString* cellIdentifier = @"cellIdentifer";
     rowsCount = 20;
     isRefreshing = NO;
     
-    UINib *nib = [UINib nibWithNibName:@"BITThreadDetailTableViewCell" bundle:nil];
-    [self.tableView registerNib:nib forCellReuseIdentifier:cellIdentifier];
-    
-    if (egoRefreshTableHeaderView == nil)
-    {
-        egoRefreshTableHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height )];
-        egoRefreshTableHeaderView.delegate = self;
-        [self.tableView addSubview:egoRefreshTableHeaderView];
-    }
-    [egoRefreshTableHeaderView refreshLastUpdatedDate];
-    
-    if (loadMoreTableFooterView == nil)
-    {
-        loadMoreTableFooterView = [[LoadMoreTableFooterView alloc] initWithFrame:CGRectMake(0.0f, self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
-        loadMoreTableFooterView.delegate = self;
-        [self.tableView addSubview:loadMoreTableFooterView];
-    }
+//    if (egoRefreshTableHeaderView == nil)
+//    {
+//        egoRefreshTableHeaderView = [[EGORefreshTableHeaderView alloc] initWithFrame:CGRectMake(0.0f, 0.0f - self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height )];
+//        egoRefreshTableHeaderView.delegate = self;
+//        [self.tableView addSubview:egoRefreshTableHeaderView];
+//    }
+//    [egoRefreshTableHeaderView refreshLastUpdatedDate];
+//    
+//    if (loadMoreTableFooterView == nil)
+//    {
+//        loadMoreTableFooterView = [[LoadMoreTableFooterView alloc] initWithFrame:CGRectMake(0.0f, self.tableView.bounds.size.height, self.view.frame.size.width, self.tableView.bounds.size.height)];
+//        loadMoreTableFooterView.delegate = self;
+//        [self.tableView addSubview:loadMoreTableFooterView];
+//    }
     
     [self getTHreadDetailListFromServer];
-//    [self.navigationController.navigationItem.leftBarButtonItem setStyle:UIBarButtonSystemItemRedo];
 
 }
 - (void)reloadData
@@ -98,6 +95,8 @@ static NSString* cellIdentifier = @"cellIdentifer";
     }];
 }
 
+#pragma mark - TableView DataSource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.threadDetailList count];
@@ -106,16 +105,69 @@ static NSString* cellIdentifier = @"cellIdentifer";
 - (BITThreadDetailTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BITThreadDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell) {
-        cell = [[BITThreadDetailTableViewCell alloc] init];
-    }
     NSDictionary *dict = [self.threadDetailList objectAtIndex:[indexPath row]];
     
-    cell.messageDict = [NSDictionary dictionaryWithDictionary:dict];
+    NSString* avatarURLString =[dict[@"avatar"]stringByDecodingURLFormat];
+   
+    
+    if (![avatarURLString isEqualToString:@""]) {
+        NSURL *url = [NSURL URLWithString: [self retriveStringFromString:[dict[@"avatar"]stringByDecodingURLFormat]]];
+        [cell.avatar setImageWithURLRequest:[NSURLRequest requestWithURL:url] placeholderImage:[UIImage imageNamed:@"noavatar"] success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+            [cell.avatar setImage:image];
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+            NSLog(@"\n---- Avatar Error ---- \n \n%@\n \n ---- Avatar Error ----\n",[error description]);
+        }];
+    }
+    [cell.usernameLabel setText:[dict[@"username"] stringByDecodingURLFormat]];
+    [cell.floorLabel setText:[NSString stringWithFormat:@"%li楼",[indexPath row]+1]];
+    NSString * timeStampString = dict[@"dateline"];
+   NSTimeInterval _interval=[timeStampString  doubleValue];
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    NSDateFormatter *objDateformat = [[NSDateFormatter alloc] init];
+    [objDateformat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    [cell.timeLabel setText:[NSString stringWithFormat:@"%@",[objDateformat stringFromDate:date]]];
+    cell.webContent
+
     return cell;
 }
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self heightForBasicCellAtIndexPath:indexPath];
+}
+- (CGFloat)heightForBasicCellAtIndexPath:(NSIndexPath *)indexPath {
+    static BITThreadDetailTableViewCell *sizingCell = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sizingCell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    });
+    
+    return [self calculateHeightForConfiguredSizingCell:sizingCell];
+}
 
+-(CGFloat)calculateHeightForConfiguredSizingCell:(UITableViewCell *)sizingCell {
+    [sizingCell setNeedsLayout];
+    [sizingCell layoutIfNeeded];
+    
+    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height + 1.0f; // Add 1.0f for the cell separator height
+}
 
+-(NSString *)retriveStringFromString:(NSString *)url
+{
+    NSString *pattern = @"\"(.*?)\"";
+    NSRegularExpression *regex = [[NSRegularExpression alloc] initWithPattern:pattern options:NSRegularExpressionCaseInsensitive | NSRegularExpressionDotMatchesLineSeparators error:nil];
+    NSTextCheckingResult *checkResult = [regex firstMatchInString:url options:NSMatchingReportCompletion range:NSMakeRange(0, url.length)];
+    
+    NSString *result = [url substringWithRange:[checkResult rangeAtIndex:0]];
+    NSString *res = nil;
+    if (true) {
+        NSMutableString *s = [NSMutableString stringWithString:result];
+        [s replaceCharactersInRange:NSRangeFromString(@"bitunion") withString:@"out.bitunion"];
+        res = [NSString stringWithString:s];
+    }
+    res = [result substringWithRange:NSMakeRange(1,result.length-2)];
+    res = [NSString stringWithFormat:@"http://out.bitunion.org/%@",res];
+    return res;
+}
 #pragma mark - UIScrollViewDelegate Methods
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

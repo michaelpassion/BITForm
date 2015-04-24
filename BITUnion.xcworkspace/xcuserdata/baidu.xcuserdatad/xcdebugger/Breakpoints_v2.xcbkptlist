@@ -62,27 +62,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BITThreadDetailTableViewCell.m"
-            timestampString = "451301643.312608"
+            timestampString = "451551883.727877"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "-init"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BITThreadDetailTableViewCell.m"
-            timestampString = "451301645.001341"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "-awakeFromNib"
             landmarkType = "5">
          </BreakpointContent>
@@ -94,12 +78,108 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BITThreadDetailViewController.m"
-            timestampString = "451303232.535735"
+            timestampString = "451553059.043405"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-getTHreadDetailListFromServer"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BITThreadDetailViewController getTHreadDetailListFromServer]"
+                  moduleName = "BITUnion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baidu/Developer/BITUnion/BITThreadDetailViewController.m"
+                  timestampString = "451550653.780156"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "606">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__62-[BITThreadDetailViewController getTHreadDetailListFromServer]_block_invoke"
+                  moduleName = "BITUnion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baidu/Developer/BITUnion/BITThreadDetailViewController.m"
+                  timestampString = "451550653.780363"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BITThreadDetailViewController.m"
+            timestampString = "451553059.043405"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-getTHreadDetailListFromServer"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BITThreadDetailViewController getTHreadDetailListFromServer]"
+                  moduleName = "BITUnion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baidu/Developer/BITUnion/BITThreadDetailViewController.m"
+                  timestampString = "451451716.616356"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "606">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__62-[BITThreadDetailViewController getTHreadDetailListFromServer]_block_invoke"
+                  moduleName = "BITUnion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/baidu/Developer/BITUnion/BITThreadDetailViewController.m"
+                  timestampString = "451451716.616597"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BITThreadDetailViewController.m"
+            timestampString = "451557369.911726"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,44 +190,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BITThreadDetailViewController.m"
-            timestampString = "451303232.535735"
+            timestampString = "451558781.339208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BITThreadDetailTableViewCell.m"
-            timestampString = "451302963.10654"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "-init"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BITThreadDetailViewController.m"
-            timestampString = "451303272.124621"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
-            landmarkName = "-getTHreadDetailListFromServer"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-retriveStringFromString:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
